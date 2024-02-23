@@ -70,20 +70,12 @@ body {
     transition: .5s;
 }
 
-.input-box input:focus~label {
+.input-box input:focus~label,
+.input-box input:valid~label {
     top: -5px;
 }
 
-.input-box input::placeholder {
-    opacity: 0;
-    transition: .5s;
-}
 
-.input-box input:focus::placeholder {
-    color: var(--primary-color);
-    font-size: 14px;
-    opacity: 1;
-}
 
 .input-box input {
     width: 100%;
@@ -95,6 +87,17 @@ body {
     color: var(--primary-color);
     font-weight: 600;
     padding: 0 35px 0 5px;
+}
+
+.input-box input::placeholder {
+    opacity: 0;
+    transition: .5s;
+}
+
+.input-box input:focus::placeholder {
+    color: var(--primary-color);
+    font-size: 14px;
+    opacity: 1;
 }
 
 .input-box .icon {
@@ -206,26 +209,25 @@ input[type="checkbox"]:checked::after {
     border-radius: 14px 0 6px 0;
     top: 0;
     left: 0;
+    text-decoration: none;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: .5s;
+    color: var(--primary-color);
+    font-size: 35px;
+    font-weight: 100;
+    cursor: pointer;
 }
 
-.back-home a {
-    text-decoration: none;
-    color: var(--primary-color);
-    font-size: 30px;
-    font-weight: 100;
+.back-home p {
     transform: rotate(45deg);
-    cursor: pointer;
-    transition: .5s;
 }
 
 .back-home:hover {
     background-color: var(--primary-color);
 }
 
-.back-home:hover a {
+.back-home:hover p {
     color: var(--secondary-color);
 }

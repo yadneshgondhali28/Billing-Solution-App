@@ -17,7 +17,7 @@
 body {
     width: 100%;
     height: 100%;
-    background: url('/images/background.jpg');
+    background: url('../images/background.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -32,7 +32,7 @@ header {
     background-color: #ce2718;
     width: 100%;
     height: 80px;
-    padding: 20px 100px;
+    padding: 0px 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -49,18 +49,22 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    column-gap: 50px;
 }
 
-.navigation>a {
+.navigation li {
+    list-style: none;
+}
+
+.navigation>li a {
+    text-decoration: none;
     position: relative;
-    font-size: 1.1em;
     color: var(--primary-color);
     text-decoration: none;
     font-weight: 500;
-    margin-left: 40px;
 }
 
-.navigation>a::after {
+.navigation>li a::after {
     content: '';
     position: absolute;
     left: 0;
@@ -74,45 +78,61 @@ header {
     transition: transform.5s;
 }
 
-.navigation>a:hover::after {
+.navigation>li a:hover::after {
     transform-origin: left;
     transform: scaleX(1);
 }
 
-.login-btn,
-.sign-up-btn {
+.nav-btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-btns li a {
+    text-decoration: none;
+    padding: 9px 20px;
+}
+
+.nav-btns .login-btn,
+.nav-btns .sign-up-btn {
     color: white;
-    width: 106px;
-    height: 45px;
     background: transparent;
     border: 2px solid var(--primary-color);
     outline: none;
     border-radius: 6px;
     cursor: pointer;
     font-size: 1.1em;
-    font-weight: 500;
+    font-weight: 400;
     transition: .5s;
 }
 
-.login-btn {
-    margin-left: 33px;
-    margin-right: 25px;
+.nav-btns .login-btn {
+    margin-right: 35px;
 }
 
-.login-btn:hover,
-.sign-up-btn:hover {
+.nav-btns .login-btn:hover,
+.nav-btns .sign-up-btn:hover {
+    font-weight: 600;
     background: var(--primary-color);
     color: var(--secondary-color);
 }
 
-.nav-btns .login-btn:hover p,
-.nav-btns .sign-up-btn:hover p {
-    font-weight: 600;
+.center {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/* Welcome template css */
-
 .welcome {
+    position: relative;
+    width: 400px;
+    height: 500px;
+    border: 2px solid var(--primary-color);
+    background-color: var(--secondary-color);
+    border-radius: 20px;
     padding: 38px;
 }
 
@@ -123,7 +143,7 @@ header {
 }
 
 .welcome>p {
-    margin-top: 20px;
+    margin-top: 14px;
     font-size: 14px;
     text-align: center;
     color: var(--primary-color);
@@ -134,7 +154,25 @@ header {
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
-    row-gap: 10px;
+    row-gap: 30px;
+}
+
+.welcome-template-btns li {
+    list-style: none;
+}
+
+.welcome-template-btns li:nth-child(2) {
+    margin-top: 8px;
+}
+
+.welcome-template-btns li a {
+    color: var(--primary-color);
+    text-decoration: none;
+    padding: 9px 20px;
+}
+
+.welcome-template-btns .login-btn {
+    padding: 9px 30px;
 }
 
 .welcome-template-btns .sign-up-btn,
@@ -144,29 +182,22 @@ header {
     width: 145px;
     height: 48px;
     font-size: 19px;
+    border: 2px solid var(--primary-color);
+    border-radius: 6px;
+    font-weight: 400;
+    transition: all ease .4s;
 }
 
 .welcome-template-btns .sign-up-btn {
     color: rgb(238 12 12);
     background-color: white;
-}
-
-.welcome-template-btns .sign-up-btn p {
-    color: red;
     font-size: 19px;
-    font-weight: 600;
+    font-weight: 500;
 }
 
-.welcome-template-btns .sign-up-btn:hover p {
-    font-size: 18px;
-    font-weight: 600;
-}
-
-.welcome-template-btns .login-btn:hover {
+.welcome-template-btns .login-btn:hover,
+.welcome-template-btns .sign-up-btn:hover {
     color: rgb(238 12 12);
     background: var(--primary-color);
-}
-
-.welcome-template-btns .login-btn:hover p {
     font-weight: 600;
 }

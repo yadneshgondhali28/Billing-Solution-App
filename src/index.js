@@ -14,7 +14,7 @@ app.engine('hbs', hbs.__express);
 app.set("view engine", 'hbs');
 app.set('views', templatePath);
 
-app.use(express.static(__dirname + '/public'));
+app.use(express.static('public'));
 
 
 app.get('/', (req, res) => {

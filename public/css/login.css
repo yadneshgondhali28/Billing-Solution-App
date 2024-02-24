@@ -70,12 +70,10 @@ body {
     transition: .5s;
 }
 
-.input-box input:focus~label,
-.input-box input:valid~label {
+.input-box input.filled~label,
+.input-box input:focus~label {
     top: -5px;
 }
-
-
 
 .input-box input {
     width: 100%;

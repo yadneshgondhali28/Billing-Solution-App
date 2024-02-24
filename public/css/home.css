@@ -172,7 +172,7 @@ header {
 }
 
 .welcome-template-btns .login-btn {
-    padding: 9px 30px;
+    padding: 10px 35px;
 }
 
 .welcome-template-btns .sign-up-btn,
@@ -193,6 +193,7 @@ header {
     background-color: white;
     font-size: 19px;
     font-weight: 500;
+    padding: 10px 25px;
 }
 
 .welcome-template-btns .login-btn:hover,

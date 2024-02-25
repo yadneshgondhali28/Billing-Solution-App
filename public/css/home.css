@@ -129,7 +129,6 @@ header {
 .welcome {
     position: relative;
     width: 400px;
-    height: 500px;
     border: 2px solid var(--primary-color);
     background-color: var(--secondary-color);
     border-radius: 20px;
@@ -143,14 +142,14 @@ header {
 }
 
 .welcome>p {
-    margin-top: 14px;
+    margin-top: 20px;
     font-size: 14px;
     text-align: center;
     color: var(--primary-color);
 }
 
 .welcome-template-btns {
-    margin-top: 22px;
+    margin-top: 30px;
     display: flex;
     flex-direction: column-reverse;
     align-items: center;

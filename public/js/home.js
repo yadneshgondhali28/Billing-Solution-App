@@ -1,11 +1,15 @@
 let greetings = [
-    { language: 'Hindi', greeting: 'Namaste' },
-    { language: 'Telugu', greeting: 'Namaskaramulu' },
-    { language: 'Kannada', greeting: 'Namaskara' },
-    { language: 'Tamil', greeting: 'Vanakkam' },
-    { language: 'Malayalam', greeting: 'Namaskaram' },
-    { language: 'Bengali', greeting: 'Nomoshkar' },
-    { language: 'Assamese', greeting: 'Nomoskar' },
+    { language: 'Hindi', greeting: 'नमस्ते' },
+    { language: 'Marathi', greeting: 'नमस्कार' },
+    { language: 'Magadhi', greeting: 'प्रणाम' },
+    { language: 'Kashmir', greeting: 'आदाब' },
+    { language: 'Bengali', greeting: 'নমস্কার' },
+    { language: 'Punjabi', greeting: 'ਸਤਿ ਸ਼੍ਰੀ ਅਕਾਲ' },
+    { language: 'Gujrati', greeting: 'जय श्री कृष्णा' },
+    { language: 'Malayalam', greeting: 'നമസ്കാരം' },
+    { language: 'Tamil', greeting: 'வணக்கம்' },
+    { language: 'Telugu', greeting: 'నమస్కారం' },
+    { language: 'Kannada', greeting: 'ನಮಸ್ಕಾರ' },
     { language: 'null', greeting: 'null' }
 ];
 
@@ -31,3 +35,4 @@ let interval = setInterval(() => {
         clearInterval(interval);
     }
 }, 1000);
+

@@ -9,7 +9,6 @@
 
   <body>
 
-    {{! login }}
     <div class="center">
       <div class="login-form">
 
@@ -31,7 +30,13 @@
 
             <div class="input-box">
               <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+              <img
+                src="images/eye-closed.svg"
+                id="eye-img"
+                alt="password visibility on/off"
+              />
               <input
+                id="password"
                 type="password"
                 name="password"
                 placeholder="enter valid password"
@@ -70,7 +75,7 @@
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
-    <script src="js/login_signup.js"></script>
+    <script src="js/login.js"></script>
   </body>
 
 </html>

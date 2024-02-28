@@ -1,4 +1,5 @@
 const express = require('express');
+const serverless = require('serverless-http');
 const app = express();
 const path = require('path');
 const hbs = require('hbs');
@@ -60,6 +61,8 @@ app.post('/login', async (req, res) => {
     }
 })
 
-app.listen(3000, () => {
-    console.log("App is running on port 3000");
-})
+// app.listen(3000, () => {
+//     console.log("App is running on port 3000");
+// })
+
+module.exports.handler = serverless(app);

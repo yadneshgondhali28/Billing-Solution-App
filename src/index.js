@@ -1,9 +1,5 @@
 const express = require('express');
-<<<<<<< HEAD
-const serverless = require('serverless-http');
-=======
 const mongoose = require('mongoose')
->>>>>>> 653027401bc2ae013805bd727f60659b9851e0b4
 const app = express();
 const path = require('path');
 const hbs = require('hbs');
@@ -15,10 +11,10 @@ var bodyParser = require("body-parser"); // ravi was here, added body parser
 const templatePath = path.join(__dirname, "../views");
 app.use(bodyParser.json()); // edited by ravi
 app.use(
-    bodyParser.urlencoded({
-      extended: true,
-    })
-  )
+  bodyParser.urlencoded({
+    extended: true,
+  })
+)
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -40,13 +36,13 @@ db.once("open", () => {
 });
 
 app.post("/contact", (req, res) => {
-    var email = req.body.email;
-    var message = req.body.message;
-  
-    if(email.trim()==='' || message.trim()===''){
-      console.log("Failed! Field can't be empty")
-      res.redirect('error_page.html')
-    }else{
+  var email = req.body.email;
+  var message = req.body.message;
+
+  if (email.trim() === '' || message.trim() === '') {
+    console.log("Failed! Field can't be empty")
+    res.redirect('error_page.html')
+  } else {
     console.log(`recieved data ${email} - ${message} `)
     var data = {
       "email": email,
@@ -56,76 +52,69 @@ app.post("/contact", (req, res) => {
       if (err) {
         throw err;
       }
-        console.log("Response saved!");
-  
+      console.log("Response saved!");
+
     });
     return res.redirect('succes_page.html')
-  }});
+  }
+});
 //  ends here  
 
 // app.get("/", (req, res) => {
-    
+
 //     res.redirect("index.html");
 //   })
-app.get('/contacts',(req,res)=>{
-    res.render('contacts')
+app.get('/contacts', (req, res) => {
+  res.render('contacts')
 })
 
 app.get('/', (req, res) => {
-    res.set({
-        "Allow-access-Allow-Origin": "*",
-      });
-    res.render('home');
+  res.set({
+    "Allow-access-Allow-Origin": "*",
+  });
+  res.render('home');
 })
 
 app.get('/login', (req, res) => {
-    res.render('login');
+  res.render('login');
 })
 
 app.get('/signup', (req, res) => {
-    res.render('signup');
+  res.render('signup');
 })
 
 app.post('/signup', async (req, res) => {
-    const password = req.body.password
-    const hashedPassword = bcrypt.hashSync(password, saltRounds);
+  const password = req.body.password
+  const hashedPassword = bcrypt.hashSync(password, saltRounds);
 
-    const data = {
-        username: req.body.username,
-        email: req.body.email,
-        password: hashedPassword,
-    }
+  const data = {
+    username: req.body.username,
+    email: req.body.email,
+    password: hashedPassword,
+  }
 
-    await collection.insertMany([data]);
+  await collection.insertMany([data]);
 
-    res.render('invoice');
+  res.render('invoice');
 })
 
 app.post('/login', async (req, res) => {
 
-    try {
-        const check = await collection.findOne({ email: req.body.email });
+  try {
+    const check = await collection.findOne({ email: req.body.email });
 
-        const isMatch = bcrypt.compareSync(req.body.password, check.password);
+    const isMatch = bcrypt.compareSync(req.body.password, check.password);
 
-        if (isMatch) {
-            res.render('invoice');
-        } else {
-            res.send("wrong password");
-        }
-    } catch {
-        res.send("wrong details");
+    if (isMatch) {
+      res.render('invoice');
+    } else {
+      res.send("wrong password");
     }
+  } catch {
+    res.send("wrong details");
+  }
 })
 
-<<<<<<< HEAD
-// app.listen(3000, () => {
-//     console.log("App is running on port 3000");
-// })
-
-module.exports.handler = serverless(app);
-=======
 app.listen(3080, () => {
-    console.log("App is running on port 3080");
+  console.log("App is running on port 3080");
 })
->>>>>>> 653027401bc2ae013805bd727f60659b9851e0b4

@@ -11,8 +11,8 @@ This is a billing app repository project.
 1. Devarsh
 2. Manish Patil
 3. Mervin George
-4. Naimish Dwivedi
+4. Naimish Dwivedi (contributor)
 5. Rashmi Jaiswar
-6. Raviraj Mali
+6. Raviraj Mali (contributor)
 7. Sundaram Singh
-8. Yadnesh D. Gondhali
+8. Yadnesh D. Gondhali (contributor)

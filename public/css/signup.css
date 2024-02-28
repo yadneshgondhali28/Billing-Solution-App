@@ -7,6 +7,12 @@
     font-family: "poppins", sans-serif;
 }
 
+:root {
+    --primary-color: #ffffff;
+    --secondary-color: #ce2718;
+    --body-backgroud-color: rgb(255, 188, 5);
+}
+
 body {
     background-color: var(--body-backgroud-color);
     background: url('../images/background.jpg');
@@ -16,11 +22,6 @@ body {
     background-attachment: fixed;
 }
 
-:root {
-    --primary-color: #ffffff;
-    --secondary-color: #ce2718;
-    --body-backgroud-color: rgb(255, 188, 5);
-}
 
 .center {
     width: 100%;
@@ -70,21 +71,18 @@ body {
     transition: .5s;
 }
 
-.input-box input.filled~label,
-.input-box input:focus~label {
-    top: -5px;
-}
-
 .input-box input {
-    width: 100%;
-    height: 100%;
+    width: 90%;
+    height: 92%;
     background: transparent;
     border: none;
     outline: none;
     font-size: 1em;
     color: var(--primary-color);
     font-weight: 600;
-    padding: 0 35px 0 5px;
+    padding: 0 50px 0 5px;
+    position: absolute;
+    left: 0;
 }
 
 .input-box input::placeholder {
@@ -95,7 +93,8 @@ body {
 .input-box input:focus::placeholder {
     color: var(--primary-color);
     font-size: 14px;
-    opacity: 1;
+    font-weight: 300;
+    opacity: 0.7;
 }
 
 .input-box .icon {
@@ -104,6 +103,31 @@ body {
     font-size: 1.2em;
     color: var(--primary-color);
     line-height: 57px;
+}
+
+.input-box input:focus+label,
+.input-box input:not(:placeholder-shown)+label {
+    transform: translateY(-47px);
+}
+
+.input-box input:not(:placeholder-shown) {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+#eye-img {
+    position: absolute;
+    width: 18px;
+    top: 17px;
+    right: 45px;
+    cursor: pointer;
+    z-index: 10;
+    opacity: 1;
+}
+
+.input-box input[type="password"]::-ms-reveal,
+.input-box input[type="password"]::-webkit-reveal {
+    display: none;
 }
 
 .remember-forgot {

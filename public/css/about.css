@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "poppins", sans-serif;
+}
+
+body {
+    background: url('../images/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: #f29b4d;
+    display: flex;
+    align-items: center;
+}
+
+.about-section {
+    width: 60%;
+    margin: 30px auto;
+    color: white;
+}
+
+.about-us,
+.our-goal,
+.why-choose-us {
+    background-color: #ce2718;
+    border: 2px solid white;
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 15px;
+}
+
+.about-us h2,
+.our-goal h2,
+.why-choose-us h2 {
+    padding-bottom: 12px;
+}
+
+.about-us h2:hover {
+    text-decoration: underline;
+}
+
+.about-us p {
+    padding-bottom: 6px;
+}
+
+.why-choose-us details {
+    padding-bottom: 6px;
+}
+
+details>summary {
+    background-color: #ffffff;
+    color: #ce2718;
+    border-radius: 8px;
+    padding: 8px;
+    width: 200px;
+    border: none;
+    cursor: pointer;
+}
+
+details>p {
+    padding: 6px;
+    margin: 0;
+    font-weight: 500;
+}

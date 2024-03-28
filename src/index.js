@@ -2,7 +2,6 @@ const express = require('express');
 const mongoose = require('mongoose')
 const app = express();
 const path = require('path');
-const hbs = require('hbs');
 const collection = require("./mongodb");
 const bcrypt = require('bcrypt');
 const saltRounds = 10;
@@ -81,6 +80,13 @@ app.get('/login', (req, res) => {
 
 app.get('/signup', (req, res) => {
   res.render('signup');
+})
+
+app.get('/about', (req, res) => {
+  res.render('about');
+})
+app.get('/services', (req, res) => {
+  res.render('services');
 })
 
 app.post('/signup', async (req, res) => {

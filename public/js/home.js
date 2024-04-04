@@ -10,7 +10,6 @@ let greetings = [
     { language: 'Tamil', greeting: 'வணக்கம்' },
     { language: 'Telugu', greeting: 'నమస్కారం' },
     { language: 'Kannada', greeting: 'ನಮಸ್ಕಾರ' },
-    { language: 'null', greeting: 'null' }
 ];
 
 let index = 0;
@@ -30,9 +29,8 @@ let interval = setInterval(() => {
         greetingElement.style.backgroundColor = "#ce2718";
         greetingElement.style.color = "White";
         greetingElement.innerHTML = `${greetings[0].greeting}!`;
-        greetingElement.style.transition = "all ease 2s",
-            console.log(greetings[0].greeting);
+        greetingElement.style.transition = "all ease 2s";
+        console.log(greetings[0].greeting);
         clearInterval(interval);
     }
 }, 1000);
-
